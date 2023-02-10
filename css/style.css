@@ -1,0 +1,244 @@
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v20-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v20-latin-500.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/poppins-v20-latin-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v20-latin-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v20-latin-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v20-latin-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v20-latin-500.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+/* poppins-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/poppins-v20-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/poppins-v20-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v20-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v20-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v20-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v20-latin-700.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+/* poppins-900 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/poppins-v20-latin-900.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/poppins-v20-latin-900.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/poppins-v20-latin-900.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/poppins-v20-latin-900.woff') format('woff'),
+        /* Modern Browsers */
+        url('../fonts/poppins-v20-latin-900.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/poppins-v20-latin-900.svg#Poppins') format('svg');
+    /* Legacy iOS */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --orange: #E52E06;
+    --black: #333333;
+}
+
+/* =================== Header Css ================= */
+
+.main-header {
+    box-shadow: 1px 2px 8px rgba(0 0 0/8%);
+    position: relative;
+}
+
+.header .logo {
+    width: 166px;
+    height: auto;
+}
+
+.header {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header i {
+    color: var(--orange);
+    font-size: 17px;
+}
+
+.header a {
+    color: #000;
+}
+
+@media screen and (min-width:991px) {
+    .header a::before {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--orange);
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        transition: all ease .3s;
+    }
+    
+    .header a:hover::before {
+        width: 100%;
+    }
+}
+
+.mobile_icon i {
+    font-size: 24px;
+}
+
+.mobile_icon i.close {
+    display: none;
+}
+
+@media screen and (max-width:991px) {
+    
+        .header nav.menu {
+            width: 50%;
+            height: 100vh;
+            background-color: #f5f3f4;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-top: 65px;
+            z-index: -1;
+            transform: translateX(100%);
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: all ease-out .4s;
+        }
+
+    nav.menu ul li:first-child 
+    {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #333333;
+        padding: 21px 20px;
+    }
+
+    nav.menu ul li:not(:first-child) {
+        padding: 10px 22px;
+    }
+
+    nav.menu ul li {
+        transition: all ease .4s;
+    }
+
+    nav.menu ul li:hover {
+        background-color: var(--orange);
+    }
+
+    nav.menu ul li:hover i, 
+    nav.menu ul li:hover a
+    {
+        color: #fff;
+    }
+
+    .mobile_icon i.close {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        font-size: 26px;
+        color: #fff;
+        background-color: var(--orange);
+        padding: 5px 10px;
+    }
+
+    .active nav.menu {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .active i.open {
+        display: none;
+    }
+
+    .active i.close {
+        display: block;
+    }
+}
+
+
