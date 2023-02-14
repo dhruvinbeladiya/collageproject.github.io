@@ -1,8 +1,9 @@
-const mobile_nav = document.querySelector(".mobile_icon");
-const header_nav = document.querySelector(".header");
+const mobile_icon = document.querySelector(".mobile_icon");
+const mobile_nav = document.querySelector(".mobile_nav");
 
 const dhruvin = () => {
-    header_nav.classList.toggle("active");
+    mobile_icon.classList.toggle("mobile_bars");
+    mobile_nav.classList.toggle("active");
 }
 
-mobile_nav.addEventListener("click", () => dhruvin());
+mobile_icon.addEventListener("click", () => dhruvin());

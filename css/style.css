@@ -101,13 +101,15 @@ body {
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 p {
     margin: 0;
 }
 
-ul,li {
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -118,11 +120,10 @@ ul,li {
     --black: #333333;
 }
 
-/* =================== Header Css ================= */
+/* =================== Header CSS ================= */
 
 .main-header {
     box-shadow: 1px 2px 8px rgba(0 0 0/8%);
-    position: relative;
 }
 
 .header .logo {
@@ -142,45 +143,113 @@ ul,li {
 
 .header a {
     color: #000;
+    position: relative;
 }
 
-@media screen and (min-width:991px) {
-    .header a::before {
-        content: '';
-        width: 0;
-        height: 2px;
-        background-color: var(--orange);
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        transition: all ease .3s;
-    }
-    
-    .header a:hover::before {
-        width: 100%;
-    }
+.menu a::before,
+.login a::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--orange);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all ease .3s;
+}
+
+.menu a:hover::before,
+.login a:hover::before {
+    width: 100%;
+}
+
+/* =================== Mobile Navigation CSS ================= */
+
+.mobile_nav {
+    background-color: var(--black);
+    width: 450px;
+    max-width: 85%;
+    height: 100vh;
+    z-index: 999;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all ease-out .4s;
+} 
+
+.mobile_nav.active {
+    transform: translateX(0);
+}
+
+.mobile_nav .mobile_login {
+    padding: 20px 15px;
+    background-color: var(--orange);
+}
+
+.mobile_login .fa-user {
+    width: 100px;
+    height: 100px;
+    color: #000;
+    background-color:#fff;
+    border-radius: 50%;
+    line-height: 100px;
+    font-size: 36px;
+}
+
+.mobile_navbar_list {
+    margin: 20px;
+}
+
+.social_icon i {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 15px;
+}
+
+.social_icon i:hover {
+    color: var(--orange);
+}
+
+
+.mobile_nav a {
+    color: #fff;
 }
 
 .mobile_icon i {
     font-size: 24px;
 }
 
-.mobile_icon i.close {
+.mobile_icon i.open {
     display: none;
 }
 
-@media screen and (max-width:991px) {
+.mobile_bars i.bars {
+    display: none;
+}
+
+.mobile_bars i.open {
+    display: block;
+}
+
+/* @media screen and (max-width:991px) {
     
         .header nav.menu {
-            width: 50%;
+            width: 55%;
             height: 100vh;
             background-color: #f5f3f4;
             position: absolute;
             top: 0;
-            right: 0;
+            left: 0;
             padding-top: 65px;
-            z-index: -1;
-            transform: translateX(100%);
+            z-index: 0;
+            transform: translateX(-100%);
             visibility: hidden;
             opacity: 0;
             pointer-events: none;
@@ -239,6 +308,4 @@ ul,li {
     .active i.close {
         display: block;
     }
-}
-
-
+} */

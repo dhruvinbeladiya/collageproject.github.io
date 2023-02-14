@@ -24,16 +24,16 @@
 
 <body>
 
-    <header class="main-header py-3 fixed-top">
+    <!-- header Section Start -->
+
+    <header class="main-header py-3 sticky-top">
         <div class="container">
-            <div class="header d-flex justify-content-between align-items-center">
+            <div class="header active d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <img src="images/logo.png" alt="" class="img-fluid">
+                    <a href="#"><img src="images/logo.png" alt="" class="img-fluid"></a>
                 </div>
                 <nav class="menu">
-                    <ul class="navbar-list d-lg-flex">
-                        <li class="d-lg-none"><a class="text-light" href="#"><i
-                                    class="fa-solid fa-circle-user me-2"></i>Log in/Sign Up</a></li>
+                    <ul class="navbar-list d-lg-flex d-none">
                         <li><a href="#" class="me-4"><i class="fa-solid fa-house-chimney me-2"></i>Home</a></li>
                         <li><a href="#" class="me-4"><i class="fa-brands fa-shopify me-2"></i>Product</a></li>
                         <li><a href="#" class="me-4"><i class="fa-solid fa-user-group me-2"></i>About</a></li>
@@ -46,49 +46,136 @@
                     <li><a href="#"><i class="fa-solid fa-circle-user me-2"></i>Log in/Sign Up</a></li>
                 </div>
                 <div class="mobile_icon d-lg-none d-block">
-                    <i class="fa-solid fa-bars open"></i>
-                    <i class="fa-solid fa-xmark close"></i>
+                    <i class="fa-solid fa-bars bars"></i>
+                    <i class="fa-solid fa-bars-staggered open"></i>
+                    <i class="fa-solid fa-xmark close text-light"></i>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Navigation Start -->
+
+        <div class="mobile_nav">
+            <div class="mobile_login">
+                <li class="text-center"><i class="fa-solid fa-user me-2"></i></li>
+                <li class="text-center mt-4"><a href="#">Log in & Sign Up</a></li>
+            </div>
+            <nav>   
+                <ul class="mobile_navbar_list d-flex flex-column">
+                    <li class="py-3"><a href="#"><i class="fa-solid fa-house-chimney me-2"></i>Home</a></li>
+                    <li class="py-3"><a href="#"><i class="fa-brands fa-shopify me-2"></i>Product</a></li>
+                    <li class="py-3"><a href="#"><i class="fa-solid fa-user-group me-2"></i>About</a></li>
+                    <li class="py-3"><a href="#"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Services</a></li>
+                    <li class="py-3"><a href="#"><i class="fa-solid fa-envelope me-2"></i>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social_icon mx-4 py-3 border-top border-secondary">
+                <span class="text-light">follow us on</span>
+                <ul class="icon_list d-flex mt-2">
+                    <li class="me-3"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="me-3"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="me-3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="me-3"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="me-3"><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation End -->
+
     </header>
 
-    <section class="slider">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
+    <!-- Header Section End -->
+
+    <!-- Carousel Section Start -->
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="images/asset 52.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="images/asset 52.jpeg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/asset 53.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- Carousel Section End -->
+
+    <!--  -->
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">Trending Categories</h2>
+                <div class="col-2 border">
+                    <div class="categories_img">
+                        <img src="images/asset 13.jpeg   " alt="" class="img-fluid">
                     </div>
+                    <div class="categories_content text-center">iphone</div>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="images/asset 53.jpeg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                <div class="col-2 border">
+                    <div class="categories_img">
+                        <img src="images/asset 14.jpeg   " alt="" class="img-fluid">
                     </div>
+                    <div class="categories_content text-center">Mini Speakers</div>
+                </div>
+                <div class="col-2 border">
+                    <div class="categories_img">
+                        <img src="images/asset 15.jpeg   " alt="" class="img-fluid">
+                    </div>
+                    <div class="categories_content text-center">Tablets</div>
+                </div>
+                <div class="col-2 border">
+                    <div class="categories_img">
+                        <img src="images/asset 10.jpeg   " alt="" class="img-fluid">
+                    </div>
+                    <div class="categories_content text-center">laptop</div>
+                </div>
+                <div class="col-2 border">
+                    <div class="categories_img">
+                        <img src="images/asset 11.jpeg   " alt="" class="img-fluid">
+                    </div>
+                    <div class="categories_content text-center">Accesories</div>
+                </div>
+                <div class="col-2 border">
+                    <div class="categories_img">
+                        <img src="images/asset 13.jpeg   " alt="" class="img-fluid">
+                    </div>
+                    <div class="categories_content text-center">iphone</div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
 
     <section style="margin-top: 100px;">
         <div style="height: 900px;">Hello</div>
