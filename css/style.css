@@ -123,7 +123,8 @@ li {
 /* =================== Header CSS ================= */
 
 .main-header {
-    box-shadow: 1px 2px 8px rgba(0 0 0/8%);
+    box-shadow: 1px 2px 8px rgba(0 0 0/10%);
+    background-color: #fff;
 }
 
 .header .logo {
@@ -175,11 +176,15 @@ li {
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
+    visibility: hidden;
     transform: translateX(-100%);
     transition: all ease-out .4s;
 } 
 
 .mobile_nav.active {
+    display: block;
+    visibility: visible;
     transform: translateX(0);
 }
 
@@ -238,74 +243,168 @@ li {
     display: block;
 }
 
-/* @media screen and (max-width:991px) {
+.carousel {
+    margin-top: 90px;
+}
+
+.active .close_icon {
+    position: absolute;
+    top: 0;
+    right: -34px;
+    background-color: #000;
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+/* =================== Categories CSS ================= */
+
+.categories {
+    border: 1px solid rgba(0 0 0/8%);
+    cursor: pointer;
+}
+
+.categories_img {
+    transition: all ease-in .5s;
+}
+
+.categories:hover .categories_img {
+    transform: scale(1.08);
+    transform-origin: center;
+}
+
+.our_categories h3.title {
+    position: relative;
+}
+
+.our_categories h3.title::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--orange);
+    transition: .2s;
+}
+
+.our_categories h3.title:hover::before {
+    width: 225px;
+} 
+
+/* ===================== Banner CSS ==================== */
+
+.banner {
+    position: relative;
+    font-size: 15px;
+}
+
+.banner_content {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.banner {
+    overflow: hidden;
+}
+
+.banner_img {
+    transition: all ease-out .5s;
+}
+
+.banner button {
+    border: none;
+    transition: .5s;
+}
+
+.banner:hover .banner_img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+    transform-origin: center;
+}
+
+.banner:hover button {
+    background-color: #000;
+}
+
+.banner_content h4 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.banner_content button span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ===================== Discount CSS ==================== */
+
+.discount_img {
+    background: url(../images/asset\ 54.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+}
+
+.discount_content h4,
+.discount_content h6 {
+    font-size: 50px;
+}   
+
+.count_item {
+    width: 80px;
+    height: 80px;
+    padding: 15px 20px;
+    margin: 0 10px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 8px rgba(0 0 0/8%),-1px -2px 8px rgba(0 0 0/8%);
+}
+
+.count_item span:first-child {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.count_item span:last-child {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+@media screen and (max-width:400px) {
+
+    .discount_img {
+        background-size: auto;
+        filter: brightness(0.8);
+    }
+ 
+    .disc_info h4,
+    .disc_info h6 {
+        font-size: 25px;
+    }
+
+    .count_item {
+        width: 60px;
+        height: 60px;
+        padding: 12px 15px;
+        margin: 0 5px;
+        border-radius: 15px;
+        background-color: rgba(255,255,255,0.8);
+        box-shadow: 1px 2px 8px rgba(0 0 0/8%),-1px -2px 8px rgba(0 0 0/8%);
+    }
     
-        .header nav.menu {
-            width: 55%;
-            height: 100vh;
-            background-color: #f5f3f4;
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding-top: 65px;
-            z-index: 0;
-            transform: translateX(-100%);
-            visibility: hidden;
-            opacity: 0;
-            pointer-events: none;
-            transition: all ease-out .4s;
-        }
-
-    nav.menu ul li:first-child 
-    {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background-color: #333333;
-        padding: 21px 20px;
+    .count_item span:first-child {
+        font-size: 16px;
+        font-weight: 500;
     }
-
-    nav.menu ul li:not(:first-child) {
-        padding: 10px 22px;
+    
+    .count_item span:last-child {
+        font-size: 10px;
+        font-weight: 300;
     }
+}
 
-    nav.menu ul li {
-        transition: all ease .4s;
-    }
-
-    nav.menu ul li:hover {
-        background-color: var(--orange);
-    }
-
-    nav.menu ul li:hover i, 
-    nav.menu ul li:hover a
-    {
-        color: #fff;
-    }
-
-    .mobile_icon i.close {
-        position: absolute;
-        top: 0;
-        right: 50%;
-        font-size: 26px;
-        color: #fff;
-        background-color: var(--orange);
-        padding: 5px 10px;
-    }
-
-    .active nav.menu {
-        transform: translateX(0);
-        visibility: visible;
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .active i.open {
-        display: none;
-    }
-
-    .active i.close {
-        display: block;
-    }
-} */
+    

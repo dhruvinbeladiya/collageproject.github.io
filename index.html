@@ -26,7 +26,7 @@
 
     <!-- header Section Start -->
 
-    <header class="main-header py-3 sticky-top">
+    <header class="main-header py-3 fixed-top">
         <div class="container">
             <div class="header active d-flex justify-content-between align-items-center">
                 <div class="logo">
@@ -48,19 +48,21 @@
                 <div class="mobile_icon d-lg-none d-block">
                     <i class="fa-solid fa-bars bars"></i>
                     <i class="fa-solid fa-bars-staggered open"></i>
-                    <i class="fa-solid fa-xmark close text-light"></i>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Navigation Start -->
 
-        <div class="mobile_nav">
+        <div class="mobile_nav d-lg-none">
+            <div class="close_icon">
+                <i class="fa-solid fa-xmark close text-light"></i>
+            </div>
             <div class="mobile_login">
                 <li class="text-center"><i class="fa-solid fa-user me-2"></i></li>
                 <li class="text-center mt-4"><a href="#">Log in & Sign Up</a></li>
             </div>
-            <nav>   
+            <nav>
                 <ul class="mobile_navbar_list d-flex flex-column">
                     <li class="py-3"><a href="#"><i class="fa-solid fa-house-chimney me-2"></i>Home</a></li>
                     <li class="py-3"><a href="#"><i class="fa-brands fa-shopify me-2"></i>Product</a></li>
@@ -91,96 +93,199 @@
 
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="images/asset 52.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="images/asset 52.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="images/asset 53.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="images/asset 53.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
             </div>
-          </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
 
     <!-- Carousel Section End -->
 
-    <!--  -->
+    <!-- Categories Section Start -->
 
-    <section class="my-5">
+    <section class="our_categories mt-5 py-5">
         <div class="container">
-            <div class="row">
-                <h2 class="text-center">Trending Categories</h2>
-                <div class="col-2 border">
-                    <div class="categories_img">
-                        <img src="images/asset 13.jpeg   " alt="" class="img-fluid">
+            <h3 class="text-center mb-5 title">Treanding Categories</h3>
+            <div class="row pt-3">
+                <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                    <div class="categories p-2">
+                        <div class="categories_img p-2">
+                            <img src="images/asset 13.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="categories_content">
+                            <p class="text-center">iphone</p>
+                        </div>
                     </div>
-                    <div class="categories_content text-center">iphone</div>
                 </div>
-                <div class="col-2 border">
-                    <div class="categories_img">
-                        <img src="images/asset 14.jpeg   " alt="" class="img-fluid">
+                <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                    <div class="categories p-2">
+                        <div class="categories_img p-2 p-2">
+                            <img src="images/asset 14.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="categories_content">
+                            <p class="text-center">iphone</p>
+                        </div>
                     </div>
-                    <div class="categories_content text-center">Mini Speakers</div>
                 </div>
-                <div class="col-2 border">
-                    <div class="categories_img">
-                        <img src="images/asset 15.jpeg   " alt="" class="img-fluid">
+                <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                    <div class="categories p-2">
+                        <div class="categories_img p-2">
+                            <img src="images/asset 15.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="categories_content">
+                            <p class="text-center">iphone</p>
+                        </div>
                     </div>
-                    <div class="categories_content text-center">Tablets</div>
                 </div>
-                <div class="col-2 border">
-                    <div class="categories_img">
-                        <img src="images/asset 10.jpeg   " alt="" class="img-fluid">
+                <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                    <div class="categories p-2">
+                        <div class="categories_img p-2">
+                            <img src="images/asset 34.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="categories_content">
+                            <p class="text-center">iphone</p>
+                        </div>
                     </div>
-                    <div class="categories_content text-center">laptop</div>
                 </div>
-                <div class="col-2 border">
-                    <div class="categories_img">
-                        <img src="images/asset 11.jpeg   " alt="" class="img-fluid">
+                <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                    <div class="categories p-2">
+                        <div class="categories_img p-2">
+                            <img src="images/asset 10.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="categories_content">
+                            <p class="text-center">iphone</p>
+                        </div>
                     </div>
-                    <div class="categories_content text-center">Accesories</div>
                 </div>
-                <div class="col-2 border">
-                    <div class="categories_img">
-                        <img src="images/asset 13.jpeg   " alt="" class="img-fluid">
+                <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
+                    <div class="categories p-2">
+                        <div class="categories_img p-2">
+                            <img src="images/asset 11.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="categories_content">
+                            <p class="text-center">iphone</p>
+                        </div>
                     </div>
-                    <div class="categories_content text-center">iphone</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!--Banner  -->
 
-
-
-
-
-
-
-
-
-    <section style="margin-top: 100px;">
-        <div style="height: 900px;">Hello</div>
-        <div style="height: 900px;">Hello Agian</div>
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-md-0 mb-4">
+                    <div class="banner">
+                        <div class="banner_img">
+                            <img src="images/asset 16.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="banner_content text-center">
+                            <span class="text-uppercase">Security Smart Camera</span>
+                            <h4 class="my-2">Just Starting At $850</h4>
+                            <button class="btn btn-danger rounded-pill px-4 py-2">
+                                <span>Shop Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner">
+                        <div class="banner_img">
+                            <img src="images/asset 17.jpeg" alt="" class="img-fluid">
+                        </div>
+                        <div class="banner_content text-center">
+                            <span class="text-uppercase">Entertainment & Games</span>
+                            <h4 class="my-2">Just Starting at $850 Hurry up!</h4>
+                            <button class="btn btn-danger rounded-pill px-4 py-2">
+                                <span>Shop Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Categories Section End -->
+
+    <!-- Discount Section Start -->
+
+    <section class="discount mt-5 py-5">
+        <div class="discount_img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-12">
+                        <div class="discount_content text-center">
+                            <div class="disc_info py-5">
+                                <button class="btn btn-danger border rounded-0 fw-bold px-4 py-2 mb-4">
+                                    <span>Hurry Up !</span>
+                                </button>
+                                <h4 class="fw-bold">Up To 25% Discount</h4>
+                                <h6 class="fw-bold">Check it Out</h6>
+                            </div>
+                            <div class="disc_timer">
+                                <ul class="counter d-flex justify-content-center">
+                                    <li class="count_item d-flex flex-column"> 
+                                        <span id="days">313</span>
+                                        <span>DAYS</span>
+                                    </li>
+                                    <li class="count_item d-flex flex-column"> 
+                                        <span id="hrs">58</span>
+                                        <span>HRS</span>
+                                    </li>
+                                    <li class="count_item d-flex flex-column"> 
+                                        <span id="mins">29</span>
+                                        <span>MINS</span>
+                                    </li>
+                                    <li class="count_item d-flex flex-column"> 
+                                        <span id="secs">27</span>
+                                        <span>SECS</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="my-5">
+                                <a href="#" class="fs-4 fw-bold">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 d-md-block d-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discount Section End -->
+
+
+    <div style="height: 900px;"> </div>
+    <div style="height: 900px;"> </div>
 
     <!-- Custom Js File -->
     <script src="js/script.js"></script>
