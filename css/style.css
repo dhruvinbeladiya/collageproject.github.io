@@ -176,14 +176,12 @@ li {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
     visibility: hidden;
     transform: translateX(-100%);
-    transition: all ease-out .4s;
+    transition: all ease-out .3s;
 } 
 
 .mobile_nav.active {
-    display: block;
     visibility: visible;
     transform: translateX(0);
 }
@@ -247,7 +245,12 @@ li {
     margin-top: 90px;
 }
 
+.close_icon {
+    display: none;
+}
+
 .active .close_icon {
+    display: block;
     position: absolute;
     top: 0;
     right: -34px;
@@ -272,29 +275,34 @@ li {
     transform-origin: center;
 }
 
-.our_categories h3.title {
+.our_categories h3.title,
+.blog h3.title {
+    width: max-content;
+    margin: 0 auto;
     position: relative;
 }
 
-.our_categories h3.title::before {
+.our_categories h3.title::before,
+.blog h3.title::before {
     content: '';
     position: absolute;
     bottom: -12px;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 60px;
+    width: 20%;
     height: 3px;
     background-color: var(--orange);
     transition: .2s;
 }
 
-.our_categories h3.title:hover::before {
-    width: 225px;
+.our_categories h3.title:hover::before,
+.blog h3.title:hover::before {
+    width: 80%;
 } 
 
 /* ===================== Banner CSS ==================== */
 
-.banner {
+.banner_info {
     position: relative;
     font-size: 15px;
 }
@@ -307,7 +315,7 @@ li {
     transform: translate(-50%,-50%);
 }
 
-.banner {
+.banner_info {
     overflow: hidden;
 }
 
@@ -315,18 +323,18 @@ li {
     transition: all ease-out .5s;
 }
 
-.banner button {
+.banner_info button {
     border: none;
     transition: .5s;
 }
 
-.banner:hover .banner_img {
+.banner_info:hover .banner_img {
     transform: scale(1.1);
     filter: brightness(0.9);
     transform-origin: center;
 }
 
-.banner:hover button {
+.banner_info:hover button {
     background-color: #000;
 }
 
@@ -358,8 +366,8 @@ li {
 .count_item {
     width: 80px;
     height: 80px;
-    padding: 15px 20px;
-    margin: 0 10px;
+    padding: 15px;
+    margin: 0 8px;
     border-radius: 15px;
     box-shadow: 1px 2px 8px rgba(0 0 0/8%),-1px -2px 8px rgba(0 0 0/8%);
 }
@@ -378,12 +386,13 @@ li {
 
     .discount_img {
         background-size: auto;
-        filter: brightness(0.8);
+        background-position: left;
+        height: 60vh;
     }
- 
+  
     .disc_info h4,
     .disc_info h6 {
-        font-size: 25px;
+        font-size: 32px;
     }
 
     .count_item {
@@ -392,12 +401,12 @@ li {
         padding: 12px 15px;
         margin: 0 5px;
         border-radius: 15px;
-        background-color: rgba(255,255,255,0.8);
+        background-color: rgba(255,255,255,0.9);
         box-shadow: 1px 2px 8px rgba(0 0 0/8%),-1px -2px 8px rgba(0 0 0/8%);
     }
     
     .count_item span:first-child {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
     }
     
@@ -407,4 +416,77 @@ li {
     }
 }
 
+/* ====================== Blog CSS ===================== */
+
+.blog_content p span.date {
+    font-size: 14px;
+}   
+
+.blog_content h4 {
+    font-size: 18px;
+}
+
+.blog_content h4 a {
+    transition: .4s;
+}
+
+.blog_content h4:hover a {
+    color: var(--orange);
+}
+
+.blog_img {
+    overflow: hidden;
+}
+
+.blog_img img {
+    transition: all ease-out .5s;
+}
+
+.blog_info:hover .blog_img img {
+    cursor: pointer;
+    transform: scale(1.1);
+    filter: brightness(0.8);
+    transform-origin: center;
+}
+
+/* ====================== Banner2 CSS ===================== */
+
+.banner2_info {
+    position: relative;
+}
+
+.banner2_content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner2_content > span {
+    font-size: 15px;
+    color: rgba(100, 100, 100, 0.8);
+}
+
+.banner2_content h4.price {
+    color: var(--orange);
+    font-size: 24px;
+}
+
+.banner2_content button {
+    font-size: 14px;
+}
+
+.banner2_img {
+    overflow: hidden;
+}
+
+.banner2_img img {
+    transition: all ease-out .6s;
+}
+
+.banner2_info:hover .banner2_img img {
+    cursor: pointer;
+    transform: scale(1.1);
+    transform-origin: center;
+}
     
