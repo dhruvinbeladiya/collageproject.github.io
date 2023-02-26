@@ -90,11 +90,12 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins';
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -102,6 +103,7 @@ body {
 a {
     text-decoration: none;
     color: #000;
+    font-size: 15px;
 }
 
 p {
@@ -115,6 +117,10 @@ li {
     padding: 0;
 }
 
+.mt-90 {
+    margin-top: 90px;
+}
+
 :root {
     --orange: #E52E06;
     --black: #333333;
@@ -123,18 +129,13 @@ li {
 /* =================== Header CSS ================= */
 
 .main-header {
-    box-shadow: 1px 2px 8px rgba(0 0 0/10%);
+    box-shadow: 1px 2px 8px rgba(0 0 0/20%);
     background-color: #fff;
 }
 
 .header .logo {
     width: 166px;
     height: auto;
-}
-
-.header {
-    font-size: 15px;
-    font-weight: 500;
 }
 
 .header i {
@@ -144,11 +145,12 @@ li {
 
 .header a {
     color: #000;
+    font-size: 15px;
+    font-weight: 500;
     position: relative;
 }
 
-.menu a::before,
-.login a::before {
+.menu .navbar_list a::before {
     content: '';
     width: 0;
     height: 2px;
@@ -159,9 +161,21 @@ li {
     transition: all ease .3s;
 }
 
-.menu a:hover::before,
-.login a:hover::before {
+.menu .navbar_list a:hover::before {
     width: 100%;
+}
+
+.login a {
+    transition: .5s;
+}
+
+.login i {
+    transition: .5s;
+}
+
+.login button:hover a,
+.login button:hover i {
+    color: #fff;
 }
 
 /* =================== Mobile Navigation CSS ================= */
@@ -171,7 +185,7 @@ li {
     width: 450px;
     max-width: 85%;
     height: 100vh;
-    z-index: 999;
+    z-index: 11;
     font-size: 15px;
     position: fixed;
     top: 0;
@@ -216,10 +230,10 @@ li {
     font-size: 15px;
 }
 
+.mobile_navbar_list a:hover,
 .social_icon i:hover {
     color: var(--orange);
 }
-
 
 .mobile_nav a {
     color: #fff;
@@ -241,10 +255,6 @@ li {
     display: block;
 }
 
-.carousel {
-    margin-top: 90px;
-}
-
 .close_icon {
     display: none;
 }
@@ -258,6 +268,10 @@ li {
     font-size: 22px;
     padding: 0 10px;
 }
+
+/* =================== Slider CSS ================= */
+
+
 
 /* =================== Categories CSS ================= */
 
@@ -488,5 +502,114 @@ li {
     cursor: pointer;
     transform: scale(1.1);
     transform-origin: center;
+}
+
+/* =================== Footer CSS ================= */
+
+.suscribe {
+    color: #fff;
+    background-color: var(--orange);
+}
+
+.sub_mail {
+    margin-top: 30px;
+    display: block;
+    position: relative;
+}
+
+.sub_mail input[type="email"] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+.sub_mail input[type="submit"] {
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    padding: 16px 25px;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--orange);
+}
+
+.main_footer {
+    background-color: var(--black);
+}
+
+.footer_info {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer_info a {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer_info a:hover {
+    color: var(--orange);
+    transition: .3s;
+}
+
+.footer_bottom {
+    color: #fff;
+    background-color: #282828;
+}
+
+.ftr_icon li:hover i {
+    position: relative;
+    color: #fff;
+}
+
+.footer_bottom .ftr_icon li {
+    width: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.footer_bottom .ftr_icon li::before {
+    content: '';
+    width: 100%;
+    height: 0;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--orange);
+    transition: all ease-out .3s;
+}
+
+.footer_bottom .ftr_icon li:hover::before {
+    height: 100%;
+}
+
+.back2top a {
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--black);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.page_info {
+    height: 200px;
+    padding: 60px 100px;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.page_info a:hover {
+    color: var(--orange);
+    transition: .6s;
 }
     
