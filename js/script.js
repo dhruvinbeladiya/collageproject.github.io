@@ -105,19 +105,19 @@ $(document).ready(() => {
                 </div>
             </div>
         </div>
-        `
+      `
     );
 });
 
-// Navigation Js
+// Header Navigation Js
 
 const open_icon = document.querySelector(".mobile_icon");
 const close_icon = document.querySelector(".close_icon");
 const mobile_nav = document.querySelector(".mobile_nav");
 
 const addActive = () => {
-    open_icon.classList.add("mobile_bars");
     mobile_nav.classList.add("active");
+    open_icon.classList.add("mobile_bars");
 }
 
 const removeActive = () => {
@@ -152,6 +152,5 @@ const CountDown = () => {
 }
 
 CountDown();
-
 setInterval(CountDown,1000);
 

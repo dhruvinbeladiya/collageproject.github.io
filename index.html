@@ -26,7 +26,7 @@
 
     <!-- header Section Start -->
 
-    <header class="main-header py-3 fixed-top">
+    <header class="main-header py-3 animated fadeInDown fixed-top">
         <div class="container">
             <div class="header d-flex justify-content-between align-items-center">
                 <div class="logo">
@@ -46,11 +46,12 @@
                     </ul>
                 </nav>
                 <div class="login d-lg-block d-none">
-                    <button class="btn btn-outline-danger rounded-1 px-1" data-bs-toggle="modal"
+                    <button class="btn btn-outline-danger rounded-pill px-2" data-bs-toggle="modal"
                         data-bs-target="#signupform">
                         <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Sign Up</span></a>
                     </button>
-                    <button class="btn btn-outline-danger rounded-1 px-2 ms-1">
+                    <button class="btn btn-outline-danger rounded-pill px-3 ms-1" data-bs-toggle="modal"
+                        data-bs-target="#loginform">
                         <a href="#"><i class="fa-solid fa-right-to-bracket me-2"></i>Log in</a>
                     </button>
                 </div>
@@ -68,8 +69,19 @@
                 <i class="fa-solid fa-xmark close text-light"></i>
             </div>
             <div class="mobile_login">
-                <li class="text-center"><i class="fa-solid fa-user me-2"></i></li>
-                <li class="text-center mt-4"><a href="#">Log in & Sign Up</a></li>
+                <div class="moblie_logo mx-auto pe-2 mb-3">
+                    <a href="#"><img src="images/logo-white.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="d-flex flex-column w-50 mx-auto">
+                    <button class="btn btn-outline-light rounded-pill px-2 mb-3" data-bs-toggle="modal"
+                        data-bs-target="#signupform">
+                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Sign Up</span></a>
+                    </button>
+                    <button class="btn btn-outline-light rounded-pill px-3" data-bs-toggle="modal"
+                        data-bs-target="#loginform">
+                        <a href="#"><i class="fa-solid fa-right-to-bracket me-2"></i>Log in</a>
+                    </button>
+                </div>
             </div>
             <nav>
                 <ul class="mobile_navbar_list d-flex flex-column">
@@ -96,6 +108,67 @@
         <!-- Mobile Navigation End -->
 
     </header>
+
+    <!-- SignUp form -->
+
+    <div class="modal fade" id="signupform" tabindex="-1" aria-labelledby="signupform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupform">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 py-2">
+                            <input type="text" class="form-control" placeholder="Your Name Here"></input>
+                        </div>
+                        <div class="col-12 py-2">
+                            <input type="email" class="form-control" placeholder="Your Email Here"></input>
+                        </div>
+                        <div class="col-12 py-2">
+                            <input type="password" class="form-control" placeholder="Create Password"></input>
+                        </div>
+                        <div class="col-12 py-2">
+                            <input type="password" class="form-control" placeholder="Confirm Password"></input>
+                        </div>
+                        <div class="col-12 py-2">
+                            <button type="submit" class="btn btn-danger rounded-pill w-100" data-bs-dismiss="modal">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+
+    <div class="modal fade" id="loginform" tabindex="-1" aria-labelledby="loginform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginform">Log in</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-12 py-2">
+                                <input type="email" class="form-control" placeholder="Enter Email Address"></input>
+                            </div>
+                            <div class="col-12 py-2">
+                                <input type="password" class="form-control" placeholder="Enter Password"></input>
+                            </div>
+                            <div class="col-12 py-2">
+                                <button type="submit" class="btn btn-danger rounded-pill w-100" data-bs-dismiss="modal">Log in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Header Section End -->
 
