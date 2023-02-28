@@ -128,35 +128,8 @@ li {
 
 /* =================== Header CSS ================= */
 
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-@keyframes fadeInDown {
-    form {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
-        -ms-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
-    }
-}
-
-.fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-}   
-
 .main-header {
-    box-shadow: 1px 2px 8px rgba(0 0 0/10%);
+    box-shadow: 1px 1px 5px rgba(0 0 0/10%);
     background-color: #fff;
 }
 
@@ -300,7 +273,35 @@ li {
     padding: 0 10px;
 }
 
-/* =================== Slider CSS ================= */
+/* ===================== Sign Up CSS ===================== */
+
+.modal-content {
+    position: relative;
+}
+
+.modal-content .fa-user {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 2px 8px rgba(0 0 0/8%), -1px -2px 8px rgba(0 0 0/8%);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.modal-content .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 13px;
+    border: none;
+    box-shadow: none;
+}
+
+
+/* ===================== Slider CSS =================== */
 
 
 
@@ -602,6 +603,7 @@ li {
     text-align: center;
     border-radius: 2px;
     background-color: #fff;
+    cursor: pointer;
     position: relative;
 }
 
@@ -633,11 +635,11 @@ li {
     right: 15px;
 }
 
-/* =================== Page Info  ====================== */
+/* =================== Page Info CSS  ====================== */
 
 .page_info {
-    height: 200px;
-    padding: 60px 100px;
+    height: 180px;
+    padding: 50px 80px;
     background-color: rgba(255, 0, 0, 0.1);
 }
 
@@ -645,4 +647,36 @@ li {
     color: var(--orange);
     transition: .6s;
 }
-    
+   
+/* =================== Product CSS  ====================== */
+
+.product {
+    box-shadow: 2px 2px 8px rgba(0 0 0/10%), -2px -2px 8px rgba(0 0 0/10%);
+    margin: 12px 2px;
+}
+
+.product_content h3.title {
+    font-size: 18px;
+    transition: .8s;
+}
+
+.product_content .price span:first-child {
+    font-size: 18px;
+}
+
+.product_img img {
+    transition: all ease-out .4s;
+}
+
+.product_img {
+    overflow: hidden;
+}
+
+.product:hover .product_img img {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+h3.title:hover {
+    color: var(--orange);
+}

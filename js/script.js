@@ -1,4 +1,9 @@
 $(document).ready(() => {
+    $('.signup').show();
+    $("#login_btn").click(() => {
+        $('.signup').hide();
+        $('.login').show();
+    });
     // Footer Append In Every page with Jquery
     $('footer').append(
     `
@@ -128,7 +133,7 @@ const removeActive = () => {
 open_icon.addEventListener("click", addActive);
 close_icon.addEventListener("click", removeActive);
 
-// Countdown Timer
+// Countdown Timer Js
 
 let dayItem = document.getElementById('days');
 let hrsItem = document.getElementById('hrs');
@@ -153,4 +158,7 @@ const CountDown = () => {
 
 CountDown();
 setInterval(CountDown,1000);
+
+//Signup Login form Js 
+
 

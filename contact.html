@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +21,7 @@
     <script src="js/jquery-3.6.3.min.js"></script>
 
 </head>
+
 <body>
 
     <!-- header Section Start -->
@@ -98,7 +100,7 @@
 
     <section class="mt-90 page_info">
         <h3 class="mb-4">Contact Us</h3>
-        <u. class="d-flex flex-row">
+        <ul class="d-flex flex-row">
             <li class="d-flex align-items-center">
                 <i class="fa-solid fa-house-chimney  me-2"></i>
                 <a href="index.html">Home</a>
@@ -110,6 +112,53 @@
         </ul>
     </section>
 
+    <!-- Contact Map & Enquiry Form -->
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">Find us on</span>
+                    <h3 class="mb-2">Google Maps</h3>
+                    <div class="map mt-4">
+                        <iframe class="w-100 rounded-2"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14877.130849007668!2d72.8800582665012!3d21.22063502713805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f60723cf01b%3A0xa04d71972d072d90!2sCroma!5e0!3m2!1sen!2sin!4v1677608019158!5m2!1sen!2sin"
+                            width="550" height="440" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mt-4">Enquiry Form</h3>
+                    <div class="contact_form mt-md-4 mt-0">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-12 py-2">
+                                    <label for="name">Enter Name *</label>
+                                    <input type="text" class="form-control" name="" id="">
+                                </div>
+                                <div class="col-12 py-2">
+                                    <label for="name">Enter Email *</label>
+                                    <input type="email" class="form-control" name="" id="">
+                                </div>
+                                <div class="col-12 py-2">
+                                    <label for="name">Enter Mobile *</label>
+                                    <input type="text" class="form-control" name="" id="">
+                                </div>
+                                <div class="col-12 py-2">
+                                    <label for="name">Enquiry Message *</label>
+                                    <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                                </div>
+                                <div class="col-md-4 col-sm-6 py-2 ms-auto">
+                                    <button type="submit" class="form-control btn btn-secondary ms-auto">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="mt-5"></footer>
 
     <!-- Custom Js File -->
@@ -118,6 +167,7 @@
     <!-- Bootstrap js File -->
     <script src="js/bootstrap.js"></script>
 
-    
+
 </body>
+
 </html>
