@@ -48,11 +48,7 @@
                 <div class="login d-lg-block d-none">
                     <button class="btn btn-outline-danger rounded-pill px-2" data-bs-toggle="modal"
                         data-bs-target="#signupform">
-                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Sign Up</span></a>
-                    </button>
-                    <button class="btn btn-outline-danger rounded-pill px-3 ms-1" data-bs-toggle="modal"
-                        data-bs-target="#loginform">
-                        <a href="#"><i class="fa-solid fa-right-to-bracket me-2"></i>Log in</a>
+                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Registration</span></a>
                     </button>
                 </div>
                 <div class="mobile_icon d-lg-none d-block">
@@ -73,13 +69,9 @@
                     <a href="#"><img src="images/logo-white.png" alt="" class="img-fluid"></a>
                 </div>
                 <div class="d-flex flex-column w-50 mx-auto">
-                    <button class="btn btn-outline-light rounded-pill px-2 mb-3" data-bs-toggle="modal"
+                    <button class="btn btn-outline-light rounded-pill px-2" data-bs-toggle="modal"
                         data-bs-target="#signupform">
-                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Sign Up</span></a>
-                    </button>
-                    <button class="btn btn-outline-light rounded-pill px-3" data-bs-toggle="modal"
-                        data-bs-target="#loginform">
-                        <a href="#"><i class="fa-solid fa-right-to-bracket me-2"></i>Log in</a>
+                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Registration</span></a>
                     </button>
                 </div>
             </div>
@@ -113,45 +105,56 @@
 
     <div class="modal fade" id="signupform" tabindex="-1" aria-labelledby="signupform" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <i class="fa fa-user"></i>
-                <div class="d-flex justify-content-between py-4">
-                    <h1 class="modal-title fs-5 mx-auto" id="signupform">Register</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content p-3">
+                <div class="user_icon">
+                    <i class="fa-solid fa-user"></i>
                 </div>
-                <div class="modal-body">
-                    <div class="signup">
-                        <div class="row">
-                            <div class="col-12 py-2">
-                                <input type="text" class="form-control" placeholder="Your Name Here"></input>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="form_menu d-flex">
+                    <a href="#" id="signuplink" class="active link w-50 text-center">Sign Up</a>
+                    <a href="#" id="loginlink" class="link w-50 text-center">Log in</a>
+                </div>
+                <div class="modal-body forms">
+                    <div class="signupform">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-12 py-1">
+                                    <input type="text" placeholder="Your Name Here"></input>
+                                    <!-- <span id="nametext">*Enter Valid Name</span> -->
+                                </div>
+                                <div class="col-12 py-1">
+                                    <input type="email" placeholder="Your Email Here"></input>
+                                </div>
+                                <div class="col-12 py-1">
+                                    <input type="password" placeholder="Create Password"></input>
+                                </div>
+                                <div class="col-12 py-1">
+                                    <input type="password" placeholder="Confirm Password"></input>
+                                </div>
+                                <div class="col-12 pt-4">
+                                    <button type="submit" class="btn btn-danger rounded-pill w-100"
+                                        data-bs-dismiss="modal">Sign Up</button>
+                                </div>
+                                <div class="col-12 py-2">
+                                    <ul class="d-flex justify-content-center">
+                                        <li class="me-3"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="me-3"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li class="me-3"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="col-12 py-2">
-                                <input type="email" class="form-control" placeholder="Your Email Here"></input>
-                            </div>
-                            <div class="col-12 py-2">
-                                <input type="password" class="form-control" placeholder="Create Password"></input>
-                            </div>
-                            <div class="col-12 py-2">
-                                <input type="password" class="form-control" placeholder="Confirm Password"></input>
-                            </div>
-                            <div class="col-12 py-2">
-                                <button type="submit" class="btn btn-danger rounded-pill w-100" data-bs-dismiss="modal">Sign Up</button>
-                            </div>
-                            <div class="col-12">
-                                <a href="#" id="login_btn">login</a>
-                            </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="login">
+                    <div class="loginform">
                         <form action="">
                             <div class="row">
                                 <div class="col-12 py-2">
-                                    <input type="email" class="form-control" placeholder="Enter Email Address"></input>
+                                    <input type="email" placeholder="Enter Email Address"></input>
                                 </div>
                                 <div class="col-12 py-2">
-                                    <input type="password" class="form-control" placeholder="Enter Password"></input>
+                                    <input type="password" placeholder="Enter Password"></input>
                                 </div>
-                                <div class="col-12 py-2">
+                                <div class="col-12 pt-5">
                                     <button type="submit" class="btn btn-danger rounded-pill w-100"
                                         data-bs-dismiss="modal">Log in</button>
                                 </div>
@@ -162,23 +165,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Login Form -->
-
-    <div class="modal fade" id="loginform" tabindex="-1" aria-labelledby="loginform" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="loginform">Log in</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Header Section End -->
 
@@ -228,7 +214,7 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
                     <div class="categories p-2">
                         <div class="categories_img p-2">
-                            <img src="images/asset 13.jpeg" alt="" class="img-fluid">
+                            <img src="images/categories1.jpeg" alt="" class="img-fluid">
                         </div>
                         <div class="categories_content">
                             <p class="text-center">iphone</p>
@@ -238,7 +224,7 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
                     <div class="categories p-2">
                         <div class="categories_img p-2 p-2">
-                            <img src="images/asset 14.jpeg" alt="" class="img-fluid">
+                            <img src="images/categories2.jpeg" alt="" class="img-fluid">
                         </div>
                         <div class="categories_content">
                             <p class="text-center">iphone</p>
@@ -248,7 +234,7 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
                     <div class="categories p-2">
                         <div class="categories_img p-2">
-                            <img src="images/asset 15.jpeg" alt="" class="img-fluid">
+                            <img src="images/categories3.jpeg" alt="" class="img-fluid">
                         </div>
                         <div class="categories_content">
                             <p class="text-center">iphone</p>
@@ -258,7 +244,7 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
                     <div class="categories p-2">
                         <div class="categories_img p-2">
-                            <img src="images/asset 34.jpeg" alt="" class="img-fluid">
+                            <img src="images/categories4.jpeg" alt="" class="img-fluid">
                         </div>
                         <div class="categories_content">
                             <p class="text-center">iphone</p>
@@ -268,7 +254,7 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
                     <div class="categories p-2">
                         <div class="categories_img p-2">
-                            <img src="images/asset 10.jpeg" alt="" class="img-fluid">
+                            <img src="images/categories5.jpeg" alt="" class="img-fluid">
                         </div>
                         <div class="categories_content">
                             <p class="text-center">iphone</p>
@@ -278,7 +264,7 @@
                 <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-3">
                     <div class="categories p-2">
                         <div class="categories_img p-2">
-                            <img src="images/asset 11.jpeg" alt="" class="img-fluid">
+                            <img src="images/categories6.jpeg" alt="" class="img-fluid">
                         </div>
                         <div class="categories_content">
                             <p class="text-center">iphone</p>

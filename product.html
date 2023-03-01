@@ -20,6 +20,49 @@
     <!-- Jquery File -->
     <script src="js/jquery-3.6.3.min.js"></script>
 
+    <script>
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "./product.json", true);
+        xmlhttp.send();
+
+        xmlhttp.onload = function () {
+            var products = xmlhttp.responseText;
+            var productdata = JSON.parse(products);
+
+            productdata.forEach(item => {
+                $(".products").append(
+                    `
+                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                    <div class="product_card">
+                        <div class="product_img p-3">
+                            <a href="#"><img src="${item.url}" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="product_content pb-4 text-center">
+                            <div class="rating text-warning py-1">
+                                <i class="${item.rating.star1}"></i>
+                                <i class="${item.rating.star2}"></i>
+                                <i class="${item.rating.star3}"></i>
+                                <i class="${item.rating.star4}"></i>
+                                <i class="${item.rating.star5}"></i>
+                            </div>
+                            <div class="py-2">
+                                <a href="#">
+                                    <h3 class="title m-0">${item.title}</h3>
+                                </a>
+                            </div>
+                            <div class="price py-1">
+                                <span class="text-danger fw-bold">${item.price}</span>
+                                <span class="text-muted fw-bold ms-1"><del>${item.discount}</del></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
+                )
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -116,293 +159,8 @@
 
     <section class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 13.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#">
-                                    <h3 class="title m-0">Iphone 13 White</h3>
-                                </a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 20.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#">
-                                    <h3 class="title m-0">Iphone 13 White</h3>
-                                </a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 22.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#">
-                                    <h3 class="title m-0">Iphone 13 White</h3>
-                                </a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 23.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#">
-                                    <h3 class="title m-0">Iphone 13 White</h3>
-                                </a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 24.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#">
-                                    <h3 class="title m-0">Iphone 13 White</h3>
-                                </a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 25.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 28.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 32.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 35.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 36.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 34.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="./images/asset 39.jpeg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#"><h3 class="title m-0">Iphone 13 White</h3></a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">$110.00</span>
-                                <span class="text-muted fw-bold ms-1"><del>$130.00</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row products">
+
             </div>
         </div>
     </section>

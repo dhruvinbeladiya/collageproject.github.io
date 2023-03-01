@@ -1,0 +1,158 @@
+[
+    {
+        "url":"./images/product1.jpeg",
+        "title":"Iphone 13 White",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$130.00",
+        "discount":"$160.00"
+    },
+    {
+        "url":"./images/product2.jpeg",
+        "title":"Home Entertainment",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$89.00",
+        "discount":"$110.00"
+    },
+    {
+        "url":"./images/product3.jpeg",
+        "title":"Apple Ipad Pro",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$169.00",
+        "discount":"$180.00"
+    },
+    {
+        "url":"./images/product4.jpeg",
+        "title":"Lenovo Ideapad",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$89.00",
+        "discount":"$110.00"
+    },
+    {
+        "url":"./images/product5.jpeg",
+        "title":"Boat Airdops",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$39.00",
+        "discount":"$60.00"
+    },
+    {
+        "url":"./images/product6.jpeg",
+        "title":"Charger Cable",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$25.00",
+        "discount":"$40.00"
+    },
+    {
+        "url":"./images/product7.jpeg",
+        "title":"Noise Smartwatch",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$81.00",
+        "discount":"$110.00"
+    },
+    {
+        "url":"./images/product8.jpeg",
+        "title":"Bluetooth Speakers",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$59.00",
+        "discount":"$75.00"
+    },
+    {
+        "url":"./images/product9.jpeg",
+        "title":"Wireless Adaptor",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$49.00",
+        "discount":"$70.00"
+    },
+    {
+        "url":"./images/product10.jpeg",
+        "title":"Iphone 14 pro max",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$180.00",
+        "discount":"$210.00"
+    },
+    {
+        "url":"./images/product11.jpeg",
+        "title":"Boat Rockerrz 450",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$79.00",
+        "discount":"$99.00"
+    },
+    {
+        "url":"./images/product12.jpeg",
+        "title":"Iphone 13 Green",
+        "rating":{
+            "star1":"fa-solid fa-star",
+            "star2":"fa-solid fa-star",
+            "star3":"fa-solid fa-star",
+            "star4":"fa-solid fa-star",
+            "star5":"fa-solid fa-star-half-stroke"
+        },
+        "price":"$141.00",
+        "discount":"$160.00"
+    }
+]

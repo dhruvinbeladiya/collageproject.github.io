@@ -1,9 +1,22 @@
 $(document).ready(() => {
-    $('.signup').show();
-    $("#login_btn").click(() => {
-        $('.signup').hide();
-        $('.login').show();
+
+    // signup login page hide show with Jquery
+    $(".loginform").hide();
+
+    $("#signuplink").click(() => {
+        $(".signupform").show();
+        $(".loginform").hide();
+        $("#loginlink").removeClass("active");
+        $("#signuplink").addClass("active");
     });
+    
+    $("#loginlink").click(() => {
+        $(".loginform").show();
+        $(".signupform").hide();
+        $("#signuplink").removeClass("active");
+        $("#loginlink").addClass("active");
+    });
+
     // Footer Append In Every page with Jquery
     $('footer').append(
     `
@@ -24,7 +37,6 @@ $(document).ready(() => {
                 </div>
             </div>
         </div>
-
         <div class="main_footer py-5 text-white">
             <div class="container">
                 <div class="row justify-content-between">
@@ -91,7 +103,6 @@ $(document).ready(() => {
                 </div>
             </div>
         </div>
-
         <div class="footer_bottom py-4">
             <div class="container">
                 <div class="row align-items-center text-md-start text-center">
@@ -159,6 +170,5 @@ const CountDown = () => {
 CountDown();
 setInterval(CountDown,1000);
 
-//Signup Login form Js 
 
 
