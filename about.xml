@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<About>
+    <AboutInfo>
+        <icon>fa-solid fa-layer-group</icon>
+        <title>Our Vision</title>
+        <point1>Good Service</point1>
+        <point2>For Community</point2>
+        <point3>Long Term Development</point3>
+        <point4>Save Our Planet</point4>
+        <point5>Help People</point5>
+    </AboutInfo>
+    <AboutInfo>
+        <icon>fa-solid fa-handshake</icon>
+        <title>Our Promise</title>
+        <point1>Sustainable Relationship</point1>
+        <point2>Renew Commitment</point2>
+        <point3>Provide The Best Solution</point3>
+        <point4>Profitable Relationship</point4>
+        <point5>Adapt With People's Needs</point5>
+    </AboutInfo>
+    <AboutInfo>
+        <icon>fa-solid fa-bullseye</icon>
+        <title>Our Mision</title>
+        <point1>Change The Habits</point1>
+        <point2>Best Quality</point2>
+        <point3>Think Big Do Bigger</point3>
+        <point4>Stablity and competence</point4>
+        <point5>Safer and Better Life</point5>
+    </AboutInfo>
+   <TeamInfo>
+        <url>./images/team1.jpg</url>
+        <Name>Marcos Alonso</Name>
+        <Designation>Manager</Designation>
+   </TeamInfo>
+   <TeamInfo>
+        <url>./images/team2.jpg</url>
+        <Name>Annie Taylor</Name>
+        <Designation>Operations</Designation>
+   </TeamInfo> 
+   <TeamInfo>
+        <url>./images/team3.jpg</url>
+        <Name>Rebecca flex</Name>
+        <Designation>Support staff</Designation>
+   </TeamInfo> 
+   <TeamInfo>
+        <url>./images/team2.jpg</url>
+        <Name>Ringo kai</Name>
+        <Designation>Partner</Designation>
+   </TeamInfo>  
+</About>

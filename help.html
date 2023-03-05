@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <title>Services Page</title>
 
     <!-- Favicon Link -->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
@@ -24,46 +24,21 @@
     <script src="js/jquery-3.6.3.min.js"></script>
 
     <script>
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "./product.json", true);
-        xmlhttp.send();
-
-        xmlhttp.onload = function () {
-            var products = xmlhttp.responseText;
-            var productdata = JSON.parse(products);
-
-            productdata.forEach(item => {
-                $(".products").append(
-                    `
-                <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-                    <div class="product_card">
-                        <div class="product_img p-3">
-                            <a href="#"><img src="${item.url}" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="product_content pb-4 text-center">
-                            <div class="rating text-warning py-1">
-                                <i class="${item.rating.star1}"></i>
-                                <i class="${item.rating.star2}"></i>
-                                <i class="${item.rating.star3}"></i>
-                                <i class="${item.rating.star4}"></i>
-                                <i class="${item.rating.star5}"></i>
-                            </div>
-                            <div class="py-2">
-                                <a href="#">
-                                    <h3 class="title m-0">${item.title}</h3>
-                                </a>
-                            </div>
-                            <div class="price py-1">
-                                <span class="text-danger fw-bold">${item.price}</span>
-                                <span class="text-muted fw-bold ms-1"><del>${item.discount}</del></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `
-                )
-            });
+        // Help Page Accordian hide show with Jquery 
+        function plus(i) {
+            $(".title" + i).css({ "background-color": "black", "color": "white" });
+            $(".plus" + i).hide();
+            $(".minus" + i).show();
+            $(".help_content .p" + i).slideDown(400);
         }
+
+        function minus(i) {
+            $(".minus" + i).hide();
+            $(".plus" + i).show();
+            $(".help_content .p" + i).slideUp(400);
+            $(".title" + i).css({ "border-top": "1px solid rgba(0 0 0/15%)", "background-color": "white", "color": "black" });
+        }
+
     </script>
 
 </head>
@@ -259,34 +234,140 @@
     <!-- Forms Section End -->
 
     <section class="mt-92 page_info">
-        <h3 class="mb-4">Our Product</h3>
+        <h3 class="mb-4">Help & Guildlines</h3>
         <ul class="d-flex flex-row">
             <li class="d-flex align-items-center">
-                <i class="fa-solid fa-house-chimney  me-2"></i>
+                <i class="fa-solid fa-house-chimney me-2"></i>
                 <a href="index.html">Home</a>
             </li>
             <li class="d-flex align-items-center">
                 <i class="fa-solid fa-angles-right fs-5 mx-2"></i>
-                <span>Product</span>
+                <span>Help</span>
             </li>
         </ul>
     </section>
 
-    <!-- Product Section Start -->
+    <!-- Help Accordian Start -->
 
-    <section class="py-5">
+    <section class="help mt-3 py-5">
         <div class="container">
-            <div class="row products">
-
+            <div class="row">
+                <div class="col-lg-6 mx-auto mb-lb-0 mb-4">
+                    <h2>
+                        <i class="fa-solid fa-wand-magic-sparkles text-danger fs-2 me-2"></i>
+                        Help & Guildlines
+                    </h2>
+                    <h5 class="pb-4 fw-bold text-muted">We are Always Here For You.</h5>
+                    <div class="help_info">
+                        <div class="help_header title1 d-flex justify-content-between align-items-center">
+                            <h3 class="m-0">What is the description of our store ?</h3>
+                            <i class="fa-solid fa-plus plus1" onclick="plus(1);"></i>
+                            <i class="fa-solid fa-minus minus1" onclick="minus(1);"></i>
+                        </div>
+                        <div class="help_content text-bg-danger">
+                            <p class="p1">
+                                A retail establishment used for the selling or repairing of consumer electronic products
+                                such as home and car stereos, Televisions, Mobilephones and personal computers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="help_info">
+                        <div class="help_header title2 d-flex justify-content-between align-items-center">
+                            <h3 class="m-0">What does our store sale ?</h3>
+                            <i class="fa-solid fa-plus plus2" onclick="plus(2);"></i>
+                            <i class="fa-solid fa-minus minus2" onclick="minus(2);"></i>
+                        </div>
+                        <div class="help_content text-bg-warning">
+                            <ul class="p2 ps-3 pb-2">
+                                <li class="py-1">Mobile Phones</li>
+                                <li class="py-1">Head Phones</li>
+                                <li class="py-1">Digital Cameras</li>
+                                <li class="py-1">Speakers</li>
+                                <li class="py-1">Charger</li>
+                                <li class="py-1">Laptop</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="help_info">
+                        <div class="help_header title3 d-flex justify-content-between align-items-center">
+                            <h3 class="m-0">How can customer order a product ?</h3>
+                            <i class="fa-solid fa-plus plus3" onclick="plus(3);"></i>
+                            <i class="fa-solid fa-minus minus3" onclick="minus(3);"></i>
+                        </div>
+                        <div class="help_content text-bg-success">
+                            <p class="p3">
+                                After seeing product details if customer are impressed by product and He want to get
+                                item, then He can order at our official website or other third parties online retailer
+                                website and He don't want to purchase item online then He also come to our shop by Given
+                                Address in Contact Page.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="help_info">
+                        <div class="help_header title4 d-flex justify-content-between align-items-center">
+                            <h3 class="m-0">How can custmor claim his warranty ?</h3>
+                            <i class="fa-solid fa-plus plus4" onclick="plus(4);"></i>
+                            <i class="fa-solid fa-minus minus4" onclick="minus(4);"></i>
+                        </div>
+                        <div class="help_content text-bg-primary">
+                            <p class="p4">
+                                If customer buy any product from us and He feel like fault,issue etc. and He want to
+                                claim warranty then He also complaint us at email dhruvoelectronics@gmail.com. But
+                                remember one thing no physical damage are done, bcz we are only given warranty in system
+                                issue,inside product issue like headphone sound problem,mobile heating etc.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="help_info">
+                        <div class="help_header title5 d-flex justify-content-between align-items-center">
+                            <h3 class="m-0">How custmoer can cancel His order ?</h3>
+                            <i class="fa-solid fa-plus plus5" onclick="plus(5);"></i>
+                            <i class="fa-solid fa-minus minus5" onclick="minus(5);"></i>
+                        </div>
+                        <div class="help_content text-bg-secondary">
+                            <p class="p5">
+                                When customer order any product online from our website or other third party online
+                                retailer website and after some issue, problem or anything else. He want to cancel his
+                                order then He should mail us at dhruvoelectronics@gmail.com and in case of He ordering
+                                from another
+                                third party website He has to mail that particular website.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="help_info">
+                        <div class="help_header title6 d-flex justify-content-between align-items-center">
+                            <h3 class="m-0">When we are available for you ?</h3>
+                            <i class="fa-solid fa-plus plus6" onclick="plus(6);"></i>
+                            <i class="fa-solid fa-minus minus6" onclick="minus(6);"></i>
+                        </div>
+                        <div class="help_content text-bg-info">
+                            <p class="p6">
+                                We are available for you <b>24x7</b>. If any query reguarding any product or anything
+                                else. you can call us, mail us or visit our store anytime. If you want to enquiry about
+                                any product you can just fill our Enquiry Form at Cotact page. We will defenitly answer
+                                you in next 48 hours.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="help_img">
+                        <img src="./images/help.png" alt="" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Section End -->
+    <!-- Help Accordian End -->
+
+    <!-- Footer Section Start -->
 
     <footer class="mt-5">
 
     </footer>
+
+    <!-- Footer Section End -->
 
     <!-- Custom Js File -->
     <script src="js/script.js"></script>
@@ -297,6 +378,5 @@
     <!-- Bootstrap js File -->
     <script src="js/bootstrap.js"></script>
 
-</body>
 
-</html>
+	

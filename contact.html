@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
 
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
     <!-- Bootstrap Css File -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -39,18 +42,15 @@
                         <li><a href="product.html" class="me-4"><i class="fa-brands fa-shopify me-2"></i>Product</a>
                         </li>
                         <li><a href="about.html" class="me-4"><i class="fa-solid fa-user-group me-2"></i>About</a></li>
-                        <li><a href="services.html" class="me-4"><i
-                                    class="fa-solid fa-wand-magic-sparkles me-2"></i>Services</a></li>
-                        <li><a href="contact.html" class="me-4"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
-                        </li>
+                        <li><a href="contact.html" class="me-4"><i class="fa-solid fa-envelope me-2"></i>Contact</a></li>
+                        <li><a href="help.html" class="me-4"><i
+                                    class="fa-solid fa-wand-magic-sparkles me-2"></i>Help</a></li>
                     </ul>
                 </nav>
                 <div class="login d-lg-block d-none">
-                    <button class="btn btn-outline-danger rounded-pill px-2">
-                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Sign Up</span></a>
-                    </button>
-                    <button class="btn btn-outline-danger rounded-pill px-3 ms-1">
-                        <a href="#"><i class="fa-solid fa-right-to-bracket me-2"></i>Log in</a>
+                    <button class="btn btn-outline-danger rounded-pill px-2" data-bs-toggle="modal"
+                        data-bs-target="#forms">
+                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Registration</span></a>
                     </button>
                 </div>
                 <div class="mobile_icon d-lg-none d-block">
@@ -67,17 +67,24 @@
                 <i class="fa-solid fa-xmark close text-light"></i>
             </div>
             <div class="mobile_login">
-                <li class="text-center"><i class="fa-solid fa-user me-2"></i></li>
-                <li class="text-center mt-4"><a href="#">Log in & Sign Up</a></li>
+                <div class="moblie_logo mx-auto pe-2 mb-3">
+                    <a href="#"><img src="images/logo-white.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="d-flex flex-column w-50 mx-auto">
+                    <button class="btn btn-outline-light rounded-pill px-2" data-bs-toggle="modal"
+                        data-bs-target="#forms">
+                        <a href="#"><i class="fa-solid fa-circle-user me-2"></i><span>Registration</span></a>
+                    </button>
+                </div>
             </div>
             <nav>
                 <ul class="mobile_navbar_list d-flex flex-column">
                     <li class="py-3"><a href="index.html"><i class="fa-solid fa-house-chimney me-2"></i>Home</a></li>
                     <li class="py-3"><a href="product.html"><i class="fa-brands fa-shopify me-2"></i>Product</a></li>
                     <li class="py-3"><a href="about.html"><i class="fa-solid fa-user-group me-2"></i>About</a></li>
-                    <li class="py-3"><a href="services.html"><i
-                                class="fa-solid fa-wand-magic-sparkles me-2"></i>Services</a></li>
                     <li class="py-3"><a href="contact.html"><i class="fa-solid fa-envelope me-2"></i>Contact</a></li>
+                    <li class="py-3"><a href="help.html"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>Help</a>
+                    </li>
                 </ul>
             </nav>
             <div class="social_icon mx-4 py-3 border-top border-secondary">
@@ -98,7 +105,117 @@
 
     <!-- Header Section End -->
 
-    <section class="mt-90 page_info">
+    <!-- Forms Section Start -->
+
+    <div class="modal fade" id="forms" tabindex="-1" aria-labelledby="signupform" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="user_icon">
+                    <i class="fa-solid fa-user signupicon"></i>
+                    <i class="fa-solid fa-key loginicon"></i>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="form_menu d-flex">
+                    <a href="#" id="signuplink" class="active link w-50 text-center">Sign Up</a>
+                    <a href="#" id="loginlink" class="link w-50 text-center">Log in</a>
+                </div>
+                <div class="modal-body forms">
+                    <div class="signupform">
+                        <form action="#" id="resetsignup">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <i class="fa-solid fa-user icon"></i>
+                                        <input type="text" id="name" placeholder="Your Name Here"></input>
+                                        <span class="line"></span>
+                                    </div>
+                                    <span id="nametext"></span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <i class="fa-solid fa-envelope icon"></i>
+                                        <input type="email" id="email" placeholder="Your Email Here"></input>
+                                        <span class="line"></span>
+                                    </div>
+                                    <span id="emailtext"></span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <i class="fa-solid fa-lock icon"></i>
+                                        <input type="password" id="pass" placeholder="Create Password">
+                                        <span class="line"></span>
+                                    </div>
+                                    <span id="passtext"></span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <i class="fa-solid fa-user-lock icon"></i>
+                                        <input type="password" id="confirmpass" placeholder="Confirm Password"></input>
+                                        <span class="line"></span>
+                                    </div>
+                                    <span id="confirmtext"></span>
+                                </div>
+                                <div class="col-12 pt-2">
+                                    <button type="submit" id="signupbtn" class="btn btn-danger rounded-pill w-100">Sign
+                                        Up</button>
+                                </div>
+                                <div class="col-12">
+                                    <p class="text-center text-muted fs-12 pt-3">Or Sign Up Using</p>
+                                    <ul class="d-flex formicon justify-content-center pt-2">
+                                        <li class=""><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="ms-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li class="ms-2"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="loginform">
+                        <form action="#" id="resetlogin">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <i class="fa-solid fa-envelope icon"></i>
+                                        <input type="email" id="loginemail" placeholder="Enter Email Address"></input>
+                                        <span class="line"></span>
+                                    </div>
+                                    <span id="loginemailtxt"></span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <i class="fa-solid fa-lock icon"></i>
+                                        <input type="password" id="loginpass" placeholder="Enter Password"></input>
+                                        <span class="line"></span>
+                                    </div>
+                                    <span id="loginpasstxt"></span>
+                                </div>
+                                <div class="col-12 d-flex align-items-center">
+                                    <input type="checkbox" class="checkbox" name="Remember Me" id="">
+                                    <label for="Remember" class="fs-14 ms-1">Remember Me</label>
+                                </div>
+                                <div class="col-12 pt-4">
+                                    <button type="submit" id="loginbtn" class="btn btn-danger rounded-pill w-100">Log
+                                        in</button>
+                                </div>
+                                <div class="col-12">
+                                    <p class="text-center text-muted fs-12 py-3">Or Log in Using</p>
+                                    <ul class="d-flex formicon justify-content-center">
+                                        <li class=""><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="ms-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li class="ms-2"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forms Section End -->
+
+    <section class="mt-92 page_info">
         <h3 class="mb-4">Contact Us</h3>
         <ul class="d-flex flex-row">
             <li class="d-flex align-items-center">
@@ -127,29 +244,30 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="mt-4">Enquiry Form</h3>
-                    <div class="contact_form mt-md-4 mt-0">
-                        <form action="">
+                <div class="col-md-6 mt-md-0 mt-4">
+                    <div class="contact_form">
+                        <h3 class="pt-2">Enquiry Form</h3>
+                        <form action="#" class="pt-2" onsubmit="enquiryform()">
                             <div class="row">
                                 <div class="col-12 py-2">
                                     <label for="name">Enter Name *</label>
-                                    <input type="text" class="form-control" name="" id="">
+                                    <input type="text" class="form-control" name="" id="" required>
                                 </div>
                                 <div class="col-12 py-2">
                                     <label for="name">Enter Email *</label>
-                                    <input type="email" class="form-control" name="" id="">
+                                    <input type="email" class="form-control" name="" id="" required>
                                 </div>
                                 <div class="col-12 py-2">
                                     <label for="name">Enter Mobile *</label>
-                                    <input type="text" class="form-control" name="" id="">
+                                    <input type="text" class="form-control" name="" id="" required>
                                 </div>
                                 <div class="col-12 py-2">
                                     <label for="name">Enquiry Message *</label>
-                                    <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                                    <textarea class="form-control" name="" id="" cols="30" rows="5" required></textarea>
                                 </div>
                                 <div class="col-md-4 col-sm-6 py-2 ms-auto">
-                                    <button type="submit" class="form-control btn btn-secondary ms-auto">Send Message</button>
+                                    <button type="submit" class="form-control btn btn-secondary ms-auto">
+                                        Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -159,10 +277,21 @@
         </div>
     </section>
 
-    <footer class="mt-5"></footer>
+    <footer class="mt-5">
+
+    </footer>
+
+    <script>
+        function enquiryform() {
+            swal('Good job!', 'Thank You for Your Message. It has been sent to us. We will reply you shortly.', 'success')
+        }
+    </script>
 
     <!-- Custom Js File -->
     <script src="js/script.js"></script>
+
+    <!-- SweatAlert File -->
+    <script src="./js/sweetalert.min.js"></script>
 
     <!-- Bootstrap js File -->
     <script src="js/bootstrap.js"></script>
