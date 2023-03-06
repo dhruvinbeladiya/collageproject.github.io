@@ -24,15 +24,24 @@
     <script src="js/jquery-3.6.3.min.js"></script>
 
     <script>
-        const xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "./product.json", true);
-        xmlhttp.send();
 
-        xmlhttp.onload = function () {
-            var products = xmlhttp.responseText;
-            var productdata = JSON.parse(products);
+        let productdata;
+        getdata()
 
-            productdata.forEach(item => {
+        function getdata() {
+            const xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onload = function () {
+                appenddata(this);
+            }
+            xmlhttp.open("GET", "./product.json", true);
+            xmlhttp.send();
+        }
+
+        function appenddata(json) {
+            productdata = json.responseText;
+
+            JSON.parse(productdata).forEach(item => {
                 $(".products").append(
                     `
                 <div class="col-lg-3 col-md-4 col-sm-6 text-center">
@@ -57,6 +66,12 @@
                                 <span class="text-danger fw-bold">${item.price}</span>
                                 <span class="text-muted fw-bold ms-1"><del>${item.discount}</del></span>
                             </div>
+                            <button type="button" class="btn btn-outline-danger mt-2 px-4 rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="showmodal(${item.id})">
+                                <a href="#">
+                                    <span>View More</span>
+                                    <i class="fa-solid fa-eye ms-2"></i>
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -64,6 +79,51 @@
                 )
             });
         }
+
+        function showmodal(id) {
+            let modaldetails = JSON.parse(productdata);
+
+            for (let i of modaldetails) {
+
+                if ((i.id) == id) {
+                    let section = `
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-4 fw-bold mx-auto" id="exampleModalLabel">${i.title}</h1>
+                        <button type="button" class="btn-close mx-auto mt-1 fw-bold fs-12" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                <div class="modal_img">
+                                    <img src="${i.url}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-md-8 py-md-4 py-0">
+                                <div>
+                                    <p class="mb-3 pe-md-5 fs-14" style="text-align: justify;">${i.description}</p>
+                                    <div class="rating text-warning mb-2">
+                                        <i class="${i.rating.star1}"></i>
+                                        <i class="${i.rating.star2}"></i>
+                                        <i class="${i.rating.star3}"></i>
+                                        <i class="${i.rating.star4}"></i>
+                                        <i class="${i.rating.star5}"></i>
+                                    </div>
+                                    <span class="text-danger fw-bold fs-5">${i.price}</span>
+                                    <span class="text-muted fw-bold ms-1 fs-6"><del>${i.discount}</del></span>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    `
+                    document.getElementById('productdetail').innerHTML = section;
+                }
+            }
+        }
+
+
     </script>
 
 </head>
@@ -85,7 +145,8 @@
                         <li><a href="product.html" class="me-4"><i class="fa-brands fa-shopify me-2"></i>Product</a>
                         </li>
                         <li><a href="about.html" class="me-4"><i class="fa-solid fa-user-group me-2"></i>About</a></li>
-                        <li><a href="contact.html" class="me-4"><i class="fa-solid fa-envelope me-2"></i>Contact</a></li>
+                        <li><a href="contact.html" class="me-4"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
+                        </li>
                         <li><a href="help.html" class="me-4"><i
                                     class="fa-solid fa-wand-magic-sparkles me-2"></i>Help</a></li>
                     </ul>
@@ -284,9 +345,24 @@
 
     <!-- Product Section End -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" id="productdetail">
+                
+            </div>
+        </div>
+    </div>
+
     <footer class="mt-5">
 
     </footer>
+
+    <!-- Back 2 Arrow -->
+
+    <div class="back2top">
+        <a href="#" class="text-white"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
 
     <!-- Custom Js File -->
     <script src="js/script.js"></script>

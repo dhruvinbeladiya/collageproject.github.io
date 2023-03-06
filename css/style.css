@@ -143,7 +143,7 @@ li {
 }
 
 .btn-danger {
-    background-color: var(--orange);
+    background-color: var(--orange)!important;
 }
 
 /* =================== Header CSS ================= */
@@ -194,8 +194,10 @@ li {
 }
 
 .login button:hover a,
-.login button:hover i {
+.login button:hover i,
+.product_content button:hover a {
     color: #fff;
+    transition: all ease-out .5s;
 }
 
 /* =================== Mobile Navigation CSS ================= */
@@ -322,7 +324,7 @@ li {
     margin-top: 48px;
 }
 
-.modal-content {
+#forms.modal .modal-content {
     max-width: 410px;
     margin: auto;
     position: relative;
@@ -430,6 +432,20 @@ li {
     padding: 30px 0;
 }
 
+.forms .fa-facebook-f {
+    background-color: #4267B2;
+}
+
+.forms .fa-twitter {
+    background-color: #1DA1F2;
+}
+
+.forms .fa-instagram {
+    font-size: 16px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
 /* ===================== Slider CSS =================== */
 
 .carousel-item {
@@ -453,9 +469,20 @@ li {
     transition: all ease-in .5s;
 }
 
+.categories_img img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
 .categories:hover .categories_img {
-    transform: scale(1.08);
+    transform: scale(1.1);
     transform-origin: center;
+}
+
+.categories:hover {
+    border-color: var(--orange);
+    transition: all ease .4s;
 }
 
 .our_categories h3.title,
@@ -534,7 +561,7 @@ li {
 /* ===================== Discount CSS ==================== */
 
 .discount_img {
-    background: url(../images/asset\ 54.jpeg);
+    background: url(../images/discount.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -802,20 +829,23 @@ li {
     font-size: 18px;
 }
 
-.product_img img {
+.product_img img,
+.modal_img img {
     transition: all ease-out .4s;
 }
 
-.product_img {
+.product_img,
+.modal_img {
     overflow: hidden;
 }
 
-.product_card:hover .product_img img {
+.product_card:hover .product_img img,
+.modal_img:hover img {
     transform: scale(1.1);
     transform-origin: center;
 }
 
-h3.title:hover {
+.product_content h3.title:hover {
     color: var(--orange);
 }
 
@@ -876,7 +906,7 @@ h3.title:hover {
 
 .team_info:hover .team_img img {
     transform: scale(1.1);
-    filter: brightness(0.9);
+    filter: brightness(0.8);
 }
 
 .team_social a:hover i {
@@ -916,9 +946,11 @@ h3.title:hover {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(50px);
     }
+
     100% {
         transform: translateY(0px);
     }

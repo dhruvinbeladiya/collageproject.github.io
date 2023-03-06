@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    
+
     // signup login page hide show with Jquery
     $(".loginform").hide();
     $(".loginicon").hide();
@@ -158,7 +158,7 @@ $(document).ready(() => {
         }
     }
 
-    $("#signupbtn").click(function () {   
+    $("#signupbtn").click(function () {
         nameerr = true;
         emailerr = true;
         passerr = true;
@@ -169,11 +169,10 @@ $(document).ready(() => {
         passcheck();
         confirmpasscheck();
 
-        if((nameerr==true) && (emailerr==true) && (passerr==true) && (confirmerr==true)) {
+        if ((nameerr == true) && (emailerr == true) && (passerr == true) && (confirmerr == true)) {
             swal('Good job!', 'You Have Been Registered Succesfully', 'success');
             document.getElementById("resetsignup").reset();
-            return true;
-        } 
+        }
         else {
             return false;
         }
@@ -196,7 +195,7 @@ $(document).ready(() => {
 
         if (loginemail == '') {
             loginemailtxt.text("*Email Required to login");
-            loginemailerr =false;
+            loginemailerr = false;
             return false;
         }
         else {
@@ -205,7 +204,7 @@ $(document).ready(() => {
 
         if (!loginemailregex.test(loginemail)) {
             loginemailtxt.text("*Enter Valid Email");
-            loginemailerr=false;
+            loginemailerr = false;
             return false;
         }
         else {
@@ -237,21 +236,33 @@ $(document).ready(() => {
         }
     }
 
-    $("#loginbtn").click(function () {   
+    $("#loginbtn").click(function () {
         loginemailerr = true;
         loginpasserr = true;
 
         loginemailcheck();
         loginpasscheck();
 
-        if((loginemailerr==true) && (loginpasserr==true) ) {
+        if ((loginemailerr == true) && (loginpasserr == true)) {
             swal('Welcome!', 'Your Login Succesfully', 'success');
             document.getElementById("resetlogin").reset();
-        } 
+        }
         else {
             return false;
         }
     })
+
+    //Back 2 Top Arraw Display on scroll
+    $('.back2top').hide();
+    $(document).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= 200) {
+            $('.back2top').show("slow");
+        } else {
+            $('.back2top').hide("slow");
+        }
+    });
+    
 
     // Footer Append In Every page with Jquery
     $('footer').append(
@@ -327,10 +338,10 @@ $(document).ready(() => {
                             <h5 class="text-white mb-3">Help & Support</h5> 
                             <ul class="d-flex flex-lg-column flex-md-row flex-column">
                                 <li class="py-3"> 
-                                    <a href="#"><img src="./images/asset 49.jpeg" alt=""></a>
+                                    <a href="#"><img src="./images/googleplay.jpeg" alt=""></a>
                                 </li>
                                 <li class="py-3 ms-lg-0 ms-md-4 ms-0">
-                                    <a href="#"><img src="./images/asset 48.jpeg" alt=""></a>
+                                    <a href="#"><img src="./images/appstore.jpeg" alt=""></a>
                                 </li>  
                             </ul>
                         </div>
@@ -388,7 +399,7 @@ let secsItem = document.getElementById('secs');
 
 const CountDown = () => {
     let CurrentDate = new Date();
-    let FutureDate = new Date("6 April 2023");
+    let FutureDate = new Date("6 May 2023");
     let myDate = FutureDate - CurrentDate;
 
     let days = Math.floor(myDate / 1000 / 60 / 60 / 24);
@@ -404,6 +415,5 @@ const CountDown = () => {
 
 CountDown();
 setInterval(CountDown, 1000);
-
 
 

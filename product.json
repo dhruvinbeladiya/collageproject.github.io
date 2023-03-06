@@ -1,158 +1,182 @@
 [
     {
-        "url":"./images/product1.jpeg",
-        "title":"Iphone 13 White",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 1,
+        "url": "./images/product1.jpeg",
+        "title": "Iphone 13 White",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$130.00",
-        "discount":"$160.00"
+        "price": "$130.00",
+        "discount": "$160.00",
+        "description": "As part of our efforts to reach our environmental goals, iPhone 13 Pro do not include a power adapter or EarPods. Included in the box is a USB‑C to Lightning Cable that supports fast charging and is compatible with USB‑C power adapters and computer ports.The iPhone 13 Pro is water-resistant. It has a rating of “IP68”."
     },
     {
-        "url":"./images/product2.jpeg",
-        "title":"Home Entertainment",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 2,
+        "url": "./images/product2.jpeg",
+        "title": "Home Entertainment",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$89.00",
-        "discount":"$110.00"
+        "price": "$89.00",
+        "discount": "$110.00",
+        "description":"Home entertainment devices include products and systems used in domestic or personal context. The home entertainment market includes several consumer electronic products such as television sets, video players & recorders, audio equipment, and gaming devices."
     },
     {
-        "url":"./images/product3.jpeg",
-        "title":"Apple Ipad Pro",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 3,
+        "url": "./images/product3.jpeg",
+        "title": "Apple Ipad Pro",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$169.00",
-        "discount":"$180.00"
+        "price": "$169.00",
+        "discount": "$180.00",
+        "description":"The new iPad Pro features a next-level Apple Pencil hover experience and superfast wireless connectivity, along with the world's most advanced mobile display, pro cameras, Face ID, Thunderbolt, and a four-speaker audio system."
     },
     {
-        "url":"./images/product4.jpeg",
-        "title":"Lenovo Ideapad",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 4,
+        "url": "./images/product4.jpeg",
+        "title": "Lenovo Ideapad",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$89.00",
-        "discount":"$110.00"
+        "price": "$89.00",
+        "discount": "$110.00",
+        "description":"Lenovo's IdeaPad Windows Duet 5i is a fantastic option for college students looking for a versatile and affordable 2-in-1 laptop. With its sturdy build quality and detachable design, it's ideal for on-the-go use. Plus, the included keyboard is a significant bonus for students on a budget."
     },
     {
-        "url":"./images/product5.jpeg",
-        "title":"Boat Airdops",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 5,
+        "url": "./images/product5.jpeg",
+        "title": "Boat Airdops",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$39.00",
-        "discount":"$60.00"
+        "price": "$39.00",
+        "discount": "$60.00",
+        "description":"Airdopes 381 wireless earbuds offer battery backup of up to 4 hours on a single charge. They also give a total playback time of 20 hours along with the charging case."
     },
     {
-        "url":"./images/product6.jpeg",
-        "title":"Charger Cable",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 6,
+        "url": "./images/product6.jpeg",
+        "title": "Charger Cable",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$25.00",
-        "discount":"$40.00"
+        "price": "$25.00",
+        "discount": "$40.00",
+        "description":"Overview. This USB 2.0 cable connects your iPhone, iPad, or iPod with Lightning connector to your computer's USB port for syncing and charging. Or you can connect to the Apple USB Power Adapter for convenient charging from a wall outlet.*"
     },
     {
-        "url":"./images/product7.jpeg",
-        "title":"Noise Smartwatch",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 7,
+        "url": "./images/product7.jpeg",
+        "title": "Noise Smartwatch",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$81.00",
-        "discount":"$110.00"
+        "price": "$81.00",
+        "discount": "$110.00",
+        "description":"Noise ColorFit Pro 2 Full Touch Control Smart Watch with 35g Weight & Upgraded LCD Display,IP68 Waterproof,Heart Rate Monitor,Sleep & Step Tracker,Call & Message Alerts & Long Battery Life"
     },
     {
-        "url":"./images/product8.jpeg",
-        "title":"Bluetooth Speakers",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 8,
+        "url": "./images/product8.jpeg",
+        "title": "Bluetooth Speakers",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$59.00",
-        "discount":"$75.00"
+        "price": "$59.00",
+        "discount": "$75.00",
+        "description":"A wireless Bluetooth speaker is a sound device that is aimed at making it easier for you to enjoy listening to your music or favorite podcasts. Most are portable and you can take them almost anywhere you go. You can do this because there are no wires to connect."
     },
     {
-        "url":"./images/product9.jpeg",
-        "title":"Wireless Adaptor",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 9,
+        "url": "./images/product9.jpeg",
+        "title": "Wireless Adaptor",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$49.00",
-        "discount":"$70.00"
+        "price": "$49.00",
+        "discount": "$70.00",
+        "description":"You can use the Apple 12W USB Power Adapter to charge your iPad, iPhone, Apple Watch, and other Apple accessories, like AirPods and Siri Remote. Just connect your device to the power adapter with the USB to Lightning cable, or Apple Watch charger that came with your device."
     },
     {
-        "url":"./images/product10.jpeg",
-        "title":"Iphone 14 pro max",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 10,
+        "url": "./images/product10.jpeg",
+        "title": "Iphone 14 pro max",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$180.00",
-        "discount":"$210.00"
+        "price": "$180.00",
+        "discount": "$210.00",
+        "description":"Reviews of the iPhone 14 Pro and iPhone 14 Pro Max were positive, highlighting the major new feature such as an always-on display with a new Dynamic Island, upgraded cameras with a 48-megapixel main lens, car crash detection and satellite connectivity for emergencies, the A16 Bionic chip for faster performance."
     },
     {
-        "url":"./images/product11.jpeg",
-        "title":"Boat Rockerrz 450",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 11,
+        "url": "./images/product11.jpeg",
+        "title": "Boat Rockerrz 450",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$79.00",
-        "discount":"$99.00"
+        "price": "$79.00",
+        "discount": "$99.00",
+        "description":"Power on the Boat Rockerz 400 and you hear a verbal cue that goes “Powering on, you've plugged into nirvana”. Once you pair a device with the headphones, you'll hear “You are now connected to Boat Rockerz 400”. Long-press the power button and the device has yet another quip, “Adios amigo, powering off”"
     },
     {
-        "url":"./images/product12.jpeg",
-        "title":"Iphone 13 Green",
-        "rating":{
-            "star1":"fa-solid fa-star",
-            "star2":"fa-solid fa-star",
-            "star3":"fa-solid fa-star",
-            "star4":"fa-solid fa-star",
-            "star5":"fa-solid fa-star-half-stroke"
+        "id": 12,
+        "url": "./images/product12.jpeg",
+        "title": "Iphone 13 Green",
+        "rating": {
+            "star1": "fa-solid fa-star",
+            "star2": "fa-solid fa-star",
+            "star3": "fa-solid fa-star",
+            "star4": "fa-solid fa-star",
+            "star5": "fa-solid fa-star-half-stroke"
         },
-        "price":"$141.00",
-        "discount":"$160.00"
+        "price": "$141.00",
+        "discount": "$160.00",
+        "description":"In terms of specs, features and functionality, the new green iPhone 13 is identical to the iPhone 13 models that were released in Sept. 2021. The glossy back on the iPhone 13 makes the green color look vibrant. But it also attracts lint and dust."
     }
 ]
