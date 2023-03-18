@@ -25,12 +25,24 @@
 
     <script>
 
-        let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "./about.xml", true);
-        xmlhttp.send();
+        window.onload = function () {
+            xmldataload();
+        }
 
-        xmlhttp.onload = function () {
-            let result = xmlhttp.responseXML;
+        let xmldataload = () => {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET", "./about.xml", true);
+            xmlhttp.send();
+        }
+
+        let myFunction = (data) => {
+            let result = data.responseXML;
+            console.log(result);
 
             for (let i = 0; i < result.getElementsByTagName("AboutInfo").length; i++) {
                 $(".about").append(
@@ -115,7 +127,8 @@
                         <li><a href="product.html" class="me-4"><i class="fa-brands fa-shopify me-2"></i>Product</a>
                         </li>
                         <li><a href="about.html" class="me-4"><i class="fa-solid fa-user-group me-2"></i>About</a></li>
-                        <li><a href="contact.html" class="me-4"><i class="fa-solid fa-envelope me-2"></i>Contact</a></li>
+                        <li><a href="contact.html" class="me-4"><i class="fa-solid fa-envelope me-2"></i>Contact</a>
+                        </li>
                         <li><a href="help.html" class="me-4"><i
                                     class="fa-solid fa-wand-magic-sparkles me-2"></i>Help</a></li>
                     </ul>
@@ -357,4 +370,5 @@
     <script src="js/bootstrap.js"></script>
 
 </body>
+
 </html>
