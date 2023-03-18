@@ -25,23 +25,12 @@
 
     <script>
 
-        window.onload = function () {
-            xmldataload();
-        }
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "./about.xml",true);
+        xmlhttp.send();
 
-        let xmldataload = () => {
-            let xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    myFunction(this);
-                }
-            };
-            xmlhttp.open("GET", "./about.xml", true);
-            xmlhttp.send();
-        }
-
-        let myFunction = (data) => {
-            let result = data.responseXML;
+        xmlhttp.onload = function() {
+            let result = xmlhttp.responseXML;
             console.log(result);
 
             for (let i = 0; i < result.getElementsByTagName("AboutInfo").length; i++) {

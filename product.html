@@ -31,11 +31,10 @@
         function getdata() {
             const xmlhttp = new XMLHttpRequest();
 
-            xmlhttp.onreadystatechange = function () {
-                if(this.readyState == 4 && this.status == 200){
-                    appenddata(this);
-                }
+            xmlhttp.onload = function () {
+                appenddata(this);
             }
+
             xmlhttp.open("GET", "./product.json", true);
             xmlhttp.send();
         }
@@ -350,7 +349,7 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content" id="productdetail">
-                
+
             </div>
         </div>
     </div>
